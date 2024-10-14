@@ -1,54 +1,74 @@
-# Odin-Kittens
+# Odin Kittens
 
-This project is part of The Odin Project: [Kittens API](https://www.theodinproject.com/lessons/ruby-on-rails-kittens-api) in Ruby on Rails Curriculum.
+This project is part of The Odin Project: [Kittens API](https://www.theodinproject.com/lessons/ruby-on-rails-kittens-api) in the Ruby on Rails curriculum.
 
-## Assignment
+## Learning Objectives
+
+By the end of this project, you will be able to:
+
+- Create a Rails application that serves both HTML and JSON responses.
+- Implement RESTful routes and controller actions for a resource.
+- Use Active Record to manage data through models.
+- Handle flash messages for user notifications.
+- Test API responses using the `rest-client` gem.
+
+## Assignment Overview
 
 **HTML Setup:**
 
-1. Create a new Rails app (`odin-kittens`), Git repo, and update the README.
-
-2. Generate a Kitten model with `name`, `age`, `cuteness`, and `softness` attributes.
-
-3. Create a KittensController with routes for all 7 RESTful actions.
-
-4. Set `kittens#index` as the root route and build basic HTML views for all actions.
-
-5. Add delete links and flash messages for success/error handling.
-
-6. Test all controller actions.
+1. **Create Rails App**: Generate a new Rails application (`odin-kittens`) and initialize a Git repository.
+2. **Generate Kitten Model**: Create a `Kitten` model with attributes: `name`, `age`, `cuteness`, and `softness`.
+3. **KittensController**: Implement a `KittensController` with routes for all 7 RESTful actions.
+4. **Root Route**: Set `kittens#index` as the root route and build HTML views for all actions.
+5. **Flash Messages**: Add flash messages for success/error handling and delete links for kittens.
+6. **Testing**: Ensure all controller actions are functioning correctly.
 
 **JSON API Setup:**
 
-1. Use `rest-client` to make requests to the app.
+1. **REST Client Requests**: Use the `rest-client` gem to make requests to the app.
+2. **JSON Responses**: Modify `KittensController#index` to respond with JSON and implement a JSON response for the `show` action.
+3. **Test API Responses**: Validate API responses using the `RestClient`.
 
-2. Modify `KittensController#index` to support `respond_to` for JSON.
+## Features
 
-3. Implement JSON response for the `show` action.
+- **RESTful API**: Provides both HTML views and JSON API endpoints for accessing kittens data.
+- **CRUD Operations**: Implement full CRUD functionality for kittens through a web interface.
+- **Flash Notifications**: User-friendly messages to indicate success or failure of actions.
 
-4. Test API responses using `RestClient`.
+## Technologies Used
 
-# Rails
+- Ruby on Rails
+- ActiveRecord for database management
+- `rest-client` gem for API requests
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Installation
 
-Things you may want to cover:
+1. Clone the repository:
 
-* Ruby version
+   ```bash
+   git clone https://github.com/jambalong/odin-kittens.git
+   ```
 
-* System dependencies
+2. Navigate to the project directory:
+   ```bash
+   cd odin-kittens
+   ```
 
-* Configuration
+3. Install dependencies:
+   ```bash
+   bundle install
+   ```
 
-* Database creation
+4. Set up the database:
+   ```bash
+   rails db:create
+   rails db:migrate
+   rails db:seed
+   ```
 
-* Database initialization
+5. Start the Rails server:
+   ```bash
+   rails server
+   ```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Access the application at `http://localhost:3000`.
